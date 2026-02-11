@@ -6,6 +6,9 @@
   <title>Обратная связь — Alprim</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="assets/js/contact.js"></script>
+
 <body>
   
 <header class="header">
@@ -26,21 +29,27 @@
     <section class="section">
       <h2>Связаться с нами</h2>
       <p class="muted">Оставьте заявку — мы перезвоним и ответим на вопросы.</p>
-      <form action="mailto:gomelalprim@gmail.com" method="post" enctype="text/plain">
+      <form id="contact-form">
+        <input id="name" type="text" name="name" placeholder="Ваше имя" required>
+        <input id="email" type="email" name="email" placeholder="Email" required>
+        <textarea id="message" name="message" placeholder="Сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+
+
+      <!-- <form action="mailto:gomelalprim@gmail.com" method="post" enctype="text/plain">
         <div class="row">
-          <div><label>Имя<br/><input required name="name" placeholder="Ваше имя"></label></div>
-          <div><label>Телефон<br/><input name="phone" placeholder="+375 ..."></label></div>
+          <div><label>Имя<br/><input required name="name" placeholder="Ваше имя" required></label></div>
+          <div><label>Телефон<br/><input name="phone" placeholder="+375 ..." type="tel" required></label></div>
         </div>
         <div class="row">
           <div><label>Email<br/><input type="email" name="email" placeholder="you@example.com"></label></div>
-          <div><label>Тема<br/><input name="subject" placeholder="Вопрос/заявка"></label></div>
         </div>
-        <div><label>Сообщение<br/><textarea name="message" rows="6" placeholder="Опишите задачу"></textarea></label></div>
         <div style="display:flex;gap:12px;margin-top:12px">
           <button class="button primary" type="submit">Отправить</button>
           <a class="button" href="mailto:gomelalprim@gmail.com">Написать на email</a>
         </div>
-      </form>
+      </form> -->
       <!-- <p class="notice" style="margin-top:12px"><strong>Примечание:</strong> форма отправляет письмо через почтовый клиент. Для серверной отправки можно подключить Formspree, FormSubmit или собственный обработчик.</p> -->
     </section>
   </main>
